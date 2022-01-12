@@ -11,8 +11,36 @@ public class Main {
     public static String nomPersonnage;
     public static short ptsDeVie;
     public static short ptsBouclier;
-    public static short doEnnemisTues;
+    public static short nbEnnemisTues;
     public static boolean bouclierActif = true;
 
+    public static void main(String[] args) {
+        initPersonnage();
+    }
+    static void initPersonnage() {
+        System.out.println("Saisir le nom de votre personnage");
+        Scanner scanner = new Scanner(System.in);
+        nomPersonnage = scanner.next();
+        ptsDeVie = MAX_PTS_VIE;
+        ptsBouclier = bouclierActif ? PTS_BOUCLIER : 0;
+        System.out.println("OK " + Util.color(nomPersonnage, Color.GREEN) + " ! C'est parti !");
+    }
+
+
+    public static boolean hasard(double pourcentage){
+        return pourcentage < Math.random();
+
+    }
+
+    public static short nombreAuHasard(short nombre) {
+        return (short) Math.round(Math.random() + nombre);
+
+    }
 }
+
+
+
+
+
+
 
