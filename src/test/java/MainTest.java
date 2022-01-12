@@ -218,4 +218,4 @@ public class MainTest {
         Assertions.assertThat(lines[2].trim()).startsWith("Ennemi numéro 1 :");
         Assertions.assertThat(lines[3].trim()).startsWith("Ennemi numéro 2 :");
     }
-}
+    }
