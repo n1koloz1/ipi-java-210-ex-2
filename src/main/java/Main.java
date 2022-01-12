@@ -16,6 +16,9 @@ public class Main {
 
     public static void main(String[] args) {
         initPersonnage();
+        short enemi = 5;
+        enemi = attaqueJoueur(enemi);
+        System.out.println("il reste" + enemi + "points de vie a l'enemi");
     }
     static void initPersonnage() {
         System.out.println("Saisir le nom de votre personnage");
@@ -24,6 +27,7 @@ public class Main {
         ptsDeVie = MAX_PTS_VIE;
         ptsBouclier = bouclierActif ? PTS_BOUCLIER : 0;
         System.out.println("OK " + Util.color(nomPersonnage, Color.GREEN) + " ! C'est parti !");
+        scanner.close();
     }
 
 
@@ -40,8 +44,12 @@ public class Main {
     public static short attaqueJoueur(short ptsVieEnemmi){
     short forceAttaque = nombreAuHasard(MAX_ATTAQUE_JOUEUR);
     ptsVieEnemmi -= forceAttaque;
-    System.out.println(nomPersonnage + "attaque l'enemmi !" + forceAttaque + "points de dommage");
-            return ptsVieEnemmi;
+    System.out.println(nomPersonnage + "attaque l'enemmi" + forceAttaque + "points de dommage");
+    return ptsVieEnemmi;
+    }
+
+    public static void afficherPersonnage(short magnus) {
+
     }
 }
 
