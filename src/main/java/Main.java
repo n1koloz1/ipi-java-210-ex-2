@@ -36,7 +36,17 @@ public class Main {
         return (short) Math.round(Math.random() + nombre);
 
     }
+
+    public static short attaqueJoueur(short ptsVieEnemmi){
+    short forceAttaque = nombreAuHasard(MAX_ATTAQUE_JOUEUR);
+    ptsVieEnemmi -= forceAttaque;
+    System.out.println(nomPersonnage + "attaque l'enemmi !" + forceAttaque + "points de dommage");
+            return ptsVieEnemmi;
+    }
 }
+
+
+
 
 
 
